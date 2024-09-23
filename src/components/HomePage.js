@@ -2,10 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
 
-const HomePage = () => {
+const HomePage = ({isIntialised}) => {
   const navigate = useNavigate();
 
   const startGame = () => {
+    isIntialised();
     navigate('/introduction'); // Navigate to the next page
   };
 

@@ -1,31 +1,39 @@
-import React, { useEffect, useRef } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './components/HomePage';
-import Introduction from './components/introduction';
-import Level1 from './components/level1';
-import Level2 from './components/Level2';
-import Level3 from './components/Level3';
-import SuccessPage from './components/SuccessPage';
-import LocationIntroduction from './components/LocationIntroduction';
+import React, { useEffect, useRef, useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import Introduction from "./components/introduction";
+import Level1 from "./components/level1";
+import Level2 from "./components/Level2";
+import Level3 from "./components/Level3";
+import SuccessPage from "./components/SuccessPage";
+import LocationIntroduction from "./components/LocationIntroduction";
 
 const App = () => {
   const audioRef = useRef(null);
 
-  useEffect(() => {
+  const handlePlayAudio = () => {
+    console.log("playing audio");
+
     if (audioRef.current) {
-      audioRef.current.volume = 1.0; // Set volume to 50%
+      audioRef.current.play();
     }
-  }, []);
+  };
+  // useEffect(() => {
+  //   handlePlayAudio();
+  //   if (audioRef.current) {
+  //     audioRef.current.volume = 1.0; // Set volume to 50%
+  //   }
+  // }, []);
 
   return (
     <Router>
-      <div>
-        {/* Background music element */}
+      <div className="w-screen h-screen text-black">
         <audio ref={audioRef} src="/audio/bgm.mp3" autoPlay loop />
-        
-        {/* Routes for different pages */}
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/"
+            element={<HomePage isIntialised={handlePlayAudio} />}
+          />
           <Route path="/introduction" element={<Introduction />} />
           <Route path="/locintro1" element={<LocationIntroduction />} />
           <Route path="/level1" element={<Level1 />} />
