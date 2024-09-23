@@ -1,0 +1,39 @@
+/* Introduction.css */
+
+.introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height of the viewport */
+    background-image: url('../images/intro.png'); /* Path to your background image */
+    background-size: contain;
+    background-position: center;
+    text-align: center; /* Center the text */
+    color: white; /* Change text color to white for better contrast */
+  }
+  
+  .imageContainer {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .image {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+  }
+  
+  .textContainer {
+    flex: 2;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ffcc00; /* Adventure theme color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  

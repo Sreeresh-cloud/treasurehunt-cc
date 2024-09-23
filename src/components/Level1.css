@@ -1,0 +1,47 @@
+/* Level1.css */
+
+.level1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #1a1a1a; /* Dark background for mystery feel */
+    color: #ffcc00; /* Adventure theme color for text */
+    font-family: 'Arial', sans-serif; /* Change font as needed */
+    padding: 20px;
+    text-align: center; /* Center text */
+  }
+  
+  .level1 h1 {
+    font-size: 2.5rem; /* Larger font for the title */
+    margin-bottom: 20px; /* Spacing below title */
+  }
+  
+  .level1 p {
+    font-size: 1.2rem; /* Font size for paragraphs */
+    margin: 10px 0; /* Spacing above and below paragraphs */
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ffcc00; /* Adventure theme color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px; /* Space above buttons */
+  }
+  
+  button:hover {
+    background-color: #e6b800; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+  }
+  
+  img {
+    width: 300px; /* Fixed width for the door image */
+    height: auto;
+    margin-bottom: 20px; /* Space below the image */
+  }
+  

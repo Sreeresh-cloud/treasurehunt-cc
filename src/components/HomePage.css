@@ -1,0 +1,60 @@
+.home-container {
+   background-image: url('../images/home.png');;
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for better text visibility */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  
+  
+  .start-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #ffcc00; /* Adventure theme color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 600px; /* Adjust the value as needed */
+  }
+  
+  .start-button:hover {
+    background-color: #e6b800; /* Darker shade on hover */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+    }
+  
+    .start-button {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  }
+  

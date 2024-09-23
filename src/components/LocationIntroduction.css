@@ -1,0 +1,59 @@
+/* LocationIntroduction.css */
+
+.introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../images/palace.png'); /* Background image of the palace */
+    background-size: cover; /* Cover the entire viewport */
+    color: #fff; /* Text color */
+    text-align: center; /* Center text */
+    padding: 20px;
+  }
+  
+  .content {
+    flex: 1;
+    max-width: 600px; /* Limit the width of the text content */
+    margin-right: 20px; /* Space between text and character */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .character-container {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the character image */
+  }
+  
+  .character-image {
+    width: 300px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  h1 {
+    font-size: 2.5rem; /* Font size for the title */
+    margin-bottom: 20px; /* Spacing below title */
+  }
+  
+  p {
+    font-size: 1.2rem; /* Font size for paragraphs */
+    margin-bottom: 20px; /* Spacing below paragraph */
+  }
+  
+  .help-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ffcc00; /* Adventure theme color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .help-button:hover {
+    background-color: #e6b800; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+  }
+  
