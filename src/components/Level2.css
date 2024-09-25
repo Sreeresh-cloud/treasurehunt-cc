@@ -1,0 +1,24 @@
+.level2-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    width: 80%;
+    margin: 50px auto;
+  }
+  
+  .skip-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .skip-button:hover {
+    background-color: #0056b3;
+  }
+  

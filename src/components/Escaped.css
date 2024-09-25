@@ -1,0 +1,28 @@
+.escaped-container {
+    text-align: center;
+    padding: 30px;
+    background-color: #e0ffe0;
+    border-radius: 10px;
+    width: 80%;
+    margin: 50px auto;
+  }
+  
+  h1 {
+    color: #28a745;
+  }
+  
+  .next-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .next-button:hover {
+    background-color: #218838;
+  }
+  

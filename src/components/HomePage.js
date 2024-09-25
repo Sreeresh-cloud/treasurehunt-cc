@@ -6,7 +6,6 @@ const HomePage = ({isIntialised}) => {
   const navigate = useNavigate();
 
   const startGame = () => {
-    isIntialised();
     navigate('/introduction'); // Navigate to the next page
   };
 

@@ -1,0 +1,72 @@
+.shrine-locked-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: white; /* Default background color */
+    transition: background-color 2s ease; /* Slow transition for background color */
+  }
+  
+  .horn-container {
+    margin: 20px;
+  }
+  
+  .horn-image {
+    width: 150px; /* Adjust image size */
+    cursor: pointer;
+  }
+  
+  .reveal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: black; /* Background when the door is opened */
+    position: relative;
+  }
+  
+  .door-slide {
+    animation: slide 1s forwards; /* Animation for sliding the door */
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100vw); /* Slide out to the left completely */
+    }
+  }
+  
+  .question-box {
+    color: white; /* Text color for the question */
+    font-size: 24px; /* Adjust font size */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .question-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .answer-input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 300px; /* Width of the input field */
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: blue; /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
