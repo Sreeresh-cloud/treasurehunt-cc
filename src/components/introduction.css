@@ -26,6 +26,7 @@
   }
   
   .button {
+    color: black;
     padding: 10px 20px;
     font-size: 1rem;
     background-color: #ffcc00; /* Adventure theme color */

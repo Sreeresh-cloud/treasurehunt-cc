@@ -21,7 +21,7 @@ const Introduction = () => {
           In the first level, you are Kunjikelu. Help Kunjikelu find the lamp from the palace!
         </p>
         <Link to="/locintro1">
-          <button className="button">Skip</button>
+          <button className="button">Next</button>
         </Link>
       </div>
     </div>
