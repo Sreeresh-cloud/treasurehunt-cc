@@ -12,7 +12,7 @@
   }
   
   .overlay {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for better text visibility */
+    background-color: rgba(0, 0, 0, 0.7); 
     padding: 20px;
     border-radius: 10px;
   }
@@ -22,16 +22,16 @@
   .start-button {
     padding: 15px 30px;
     font-size: 1.2rem;
-    background-color: #ffcc00; /* Adventure theme color */
+    background-color: #ffcc00; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 600px; /* Adjust the value as needed */
+    margin-top: 600px; 
   }
   
   .start-button:hover {
-    background-color: #e6b800; /* Darker shade on hover */
+    background-color: #e6b800; 
   }
   
   @keyframes fadeIn {

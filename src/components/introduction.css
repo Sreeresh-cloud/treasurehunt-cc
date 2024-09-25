@@ -1,11 +1,10 @@
-/* Introduction.css */
 
 .introduction {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('../images/sample1.png');
     height: 100vh; /* Full height of the viewport */
-    background-image: url('../images/intro.png'); /* Path to your background image */
     background-size: contain;
     background-position: center;
     text-align: center; /* Center the text */

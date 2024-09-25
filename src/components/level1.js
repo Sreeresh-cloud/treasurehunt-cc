@@ -1,61 +1,58 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import lockedDoorImage from '../images/locked-door.png'; // Path to your locked door image
-import unlockedDoorImage from '../images/unlocked-door.png'; // Path to your unlocked door image
-import './Level1.css'; // Import the CSS file
-
+import lockedDoorImage from '../images/locked-door.png';
+import unlockedDoorImage from '../images/unlocked-door.png';
+import './Level1.css';
+import DarkRoom from './DarkRoom'; // Import the DarkRoom component
 
 const Level1 = () => {
   const [pinEntered, setPinEntered] = useState(false);
-  const [puzzleSolved, setPuzzleSolved] = useState(false);
+  const [doorSliding, setDoorSliding] = useState(false);
+  const [showDarkRoom, setShowDarkRoom] = useState(false); // Control the rendering of DarkRoom
 
   const handlePinInput = (e) => {
     if (e.target.value === '404') {
       setPinEntered(true);
+      setTimeout(() => {
+        setDoorSliding(true);
+        setTimeout(() => {
+          setShowDarkRoom(true); // Show DarkRoom after the door slides out
+        }, 1500); // Adjust this duration to match the slide-out animation
+      }, 1000); // Start sliding after 1 second
     }
-  };
-
-  const handlePuzzleSolve = () => {
-    setPuzzleSolved(true);
-  };
-
-  const openErrorPage = () => {
-    window.open('https://http.cat/404', '_blank'); // Opens a new tab with a 404 error page
   };
 
   return (
     <div className="level1">
-      <h1>Level 1: The Palace</h1>
+      {/* Render the door and overlay only if DarkRoom is not shown */}
+      {!showDarkRoom && (
+        <div className={`door-overlay ${doorSliding ? 'slide-out' : ''}`}>
+          <div className={`door-container ${pinEntered ? 'door-unlocked' : ''}`}>
+            <img
+              src={pinEntered ? unlockedDoorImage : lockedDoorImage}
+              alt={pinEntered ? 'Unlocked Door' : 'Locked Door'}
+              className="door-image"
+            />
+          </div>
 
-      <div>
-        <img
-          src={pinEntered ? unlockedDoorImage : lockedDoorImage}
-          alt={pinEntered ? "Unlocked Door" : "Locked Door"}
-          style={{ width: '300px', height: 'auto', marginBottom: '20px' }} // Adjust size as needed
-        />
-      </div>
-
-      {!pinEntered ? (
-        <div>
-          <p>The Door is locked. Enter the PIN:</p>
-          <button onClick={openErrorPage} style={{ marginBottom: '10px' }}>
-            Touch me if you want the PIN
-          </button>
-          <input type="text" placeholder="Enter PIN" onChange={handlePinInput} />
-        </div>
-      ) : !puzzleSolved ? (
-        <div>
-          <p>You have entered the dark hallway and found a clue: "PUZZLE"</p>
-          <button onClick={handlePuzzleSolve}>Solve Puzzle</button>
-        </div>
-      ) : (
-        <div>
-          <p>You have found the Python Snake. Kelu finds the lamp but it's a fake!</p>
-          <Link to="/level2">
-            <button>Proceed to Level 2</button>
-          </Link>
+          {!pinEntered ? (
+            <div className="input-container">
+              <h1>Level 1: The Door Closed</h1>
+              <p>The Door is locked. Enter the PIN:</p>
+              <button onClick={() => window.open('https://http.cat/404', '_blank')} style={{ marginBottom: '10px' }}>
+                Touch me if you want the PIN
+              </button>
+              <input type="text" placeholder="Enter PIN" onChange={handlePinInput} />
+            </div>
+          ) : (
+            <div className="unlocking-message">
+              <h1>The door is opening...</h1>
+            </div>
+          )}
         </div>
       )}
+
+      {/* Conditionally render the DarkRoom component */}
+      {showDarkRoom && <DarkRoom />}
     </div>
   );
 };

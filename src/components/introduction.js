@@ -5,7 +5,7 @@ import './introduction.css'; // Import the CSS file
 
 const Introduction = () => {
   return (
-    <div className="introduction">
+    <div  className="introduction"  >
       
       <div className="textContainer">
         <h1>About the Treasure Hunt</h1>

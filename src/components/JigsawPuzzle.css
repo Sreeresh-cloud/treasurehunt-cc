@@ -1,0 +1,54 @@
+/* Container for the entire app */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Styling for the jigsaw puzzle container with smaller dimensions */
+  .jigsaw-container {
+    position: relative;
+    width: 200px; /* Reduced width */
+    height: 200px; /* Reduced height */
+    transition: transform 1.5s ease-in-out;
+  }
+  
+  /* Apply this class to make the puzzle pieces fall down */
+  .falling-puzzle {
+    transform: translateY(400px); /* Adjust the distance based on the reduced size */
+    opacity: 0; /* Fade out the puzzle as it falls */
+  }
+  
+  /* Style for the individual puzzle piece images */
+  .jigsaw-puzzle__piece img {
+    object-fit: cover; /* Ensure image scales correctly within puzzle piece */
+    width: 100%; /* Ensure the image fits within the piece */
+    height: 100%;
+  }
+  
+  /* Container for the lamp */
+  .lamp-container {
+    margin-top: 20px;
+    opacity: 0; /* Initially hidden */
+    animation: revealLamp 1.5s ease-in-out forwards;
+  }
+  
+  /* Lamp reveal animation */
+  @keyframes revealLamp {
+    0% {
+      opacity: 0;
+      transform: scale(0.5); /* Start smaller */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1); /* Full size at the end */
+    }
+  }
+  
+  /* Lamp image styling */
+  .lamp-image {
+    width: 80px; /* Reduced size for the lamp image */
+    height: auto;
+  }
+  

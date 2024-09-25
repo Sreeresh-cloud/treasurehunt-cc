@@ -6,7 +6,7 @@ import './LocationIntroduction.css'; // Import the CSS file
 
 const LocationIntroduction = () => {
   return (
-    <div className="introduction">
+    <div className="locIntroduction">
       <div className="content">
         <h1>Welcome to the Palace</h1>
         <p>
