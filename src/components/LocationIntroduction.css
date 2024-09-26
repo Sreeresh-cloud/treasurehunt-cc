@@ -9,7 +9,7 @@
     background-size: cover; /* Cover the entire viewport */
     color: #fff; /* Text color */
     text-align: center; /* Center text */
-    padding: 20px;
+    /* padding: 20px; */
   }
   
   .content {
@@ -21,16 +21,16 @@
     border-radius: 10px; /* Rounded corners */
   }
   
-  .character-container {
+  .character-container { 
     flex: 1;
     display: flex;
     justify-content: center; /* Center the character image */
   }
   
-  .character-image {
-    width: 300px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-  }
+  /* .character-image {
+    width: 300px;
+    height: auto; 
+  } */
   
   h1 {
     font-size: 2.5rem; /* Font size for the title */

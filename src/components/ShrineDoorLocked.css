@@ -54,7 +54,7 @@
   }
   
   .answer-input {
-    padding: 10px;
+    /* padding: 10px; */
     font-size: 16px;
     margin-bottom: 10px;
     width: 300px; /* Width of the input field */

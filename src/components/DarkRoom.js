@@ -57,13 +57,13 @@ const DarkRoom = () => {
     <div className={`dark-room ${isRoomLit ? 'lit-room' : ''} ${fadeOut ? 'fade-out' : ''}`}>
       {!isRoomLit ? (
         <>
-          <h1 className="task-text">Task 2: Dark Room</h1>
+          <h1 className="task-text font-bold">Task 2: Dark Room</h1>
           <h2>Light up the room to unravel the mystery. Turn on the correct switch below to light up the room.</h2>
           <h3>ALERT!! YOU ONLY HAVE 5 ATTEMPTS</h3>
           <p className="hint-text">
             Hint: What do you get when you multiply the number of faces of a cube by the number of vertices of a triangle?
           </p>
-          <div className={`matrix-container ${showButtons ? 'fade-in' : ''}`}>
+          <div className={`matrix-container flex gap-1 ${showButtons ? 'fade-in' : ''}`}>
             {Array.from({ length: 24 }, (_, index) => (
               <button
                 key={index}
@@ -79,7 +79,7 @@ const DarkRoom = () => {
         <div className="lit-message">
           <h1 className={`fade-out-text ${showSecondMessage ? 'hide' : ''}`}>Congrats, The room is lightened up!</h1>
           {showSecondMessage && (
-            <h2 className={`fade-in-text ${isTransitionComplete ? 'hide' : ''}`}>
+            <h2 className={`fade-in-text text-black ${isTransitionComplete ? 'hide' : ''}`}>
               You are near to the lamp. The lamp is hidden somewhere. Find it!
             </h2>
           )}

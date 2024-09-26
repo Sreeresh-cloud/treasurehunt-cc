@@ -19,6 +19,7 @@ const ShrineDoorLocked = () => {
     }
   };
 
+
   return (
     <div className="shrine-locked-container">
       <h1>Shrine Door Locked</h1>

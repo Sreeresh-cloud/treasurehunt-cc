@@ -10,7 +10,7 @@
     color: white;
     text-align: center;
   }
-  
+   
   .overlay {
     background-color: rgba(0, 0, 0, 0.7); 
     padding: 20px;
@@ -20,8 +20,8 @@
   
   
   .start-button {
-    padding: 15px 30px;
-    font-size: 1.2rem;
+    padding: 10px 20px;
+    font-size: 1.6rem;
     background-color: #ffcc00; 
     border: none;
     border-radius: 5px;
@@ -31,7 +31,7 @@
   }
   
   .start-button:hover {
-    background-color: #e6b800; 
+    background-color: #181710; 
   }
   
   @keyframes fadeIn {

@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import { JigsawPuzzle } from 'react-jigsaw-puzzle/lib';
-import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css';
-import './JigsawPuzzle.css'; // Import your custom CSS
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import React, { useState } from "react";
+import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
+import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
+import "./JigsawPuzzle.css"; // Import your custom CSS
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+
+import puzzleBg from "../images/puzzleBg.png";
+import keluSad from "../images/keluSad.png";
 
 const JigsawPuzzlecomponent = () => {
   const [isSolved, setIsSolved] = useState(false); // To track if the puzzle is solved
@@ -21,15 +24,21 @@ const JigsawPuzzlecomponent = () => {
   };
 
   const handleNext = () => {
-    navigate('/level2'); // Navigate to the Level 2 page
+    navigate("/level2"); // Navigate to the Level 2 page
   };
 
   return (
     <div className="app-container">
-      <h1>The Lamp is hidden Somewhere. Find it </h1>
+      <h1 className="font-bold text-white p-2 px-4 bg-black bg-opacity-60 rounded-2xl">
+        Solve the puzzle to reveal the lamp.
+      </h1>
 
       {/* Jigsaw puzzle container with falling animation */}
-      <div className={`jigsaw-container ${isSolved ? 'falling-puzzle' : ''}`}>
+      <div
+        className={`jigsaw-container bg-black bg-opacity-90 rounded-2xl p-2 ${
+          isSolved ? "falling-puzzle hidden" : ""
+        }`}
+      >
         <JigsawPuzzle
           imageSrc="/python.webp" // Ensure this image is in the public folder
           rows={3}
@@ -38,20 +47,22 @@ const JigsawPuzzlecomponent = () => {
         />
       </div>
 
-      {/* Lamp will be revealed after the puzzle is solved and pieces fall */}
-      {showLamp && (
-        <div className="lamp-container">
-          <img src="/lamp.webp" alt="Lamp" className="lamp-image" /> {/* Ensure the image is in the public folder */}
-        </div>
-      )}
-
       {/* Message displayed after revealing the lamp */}
       {showMessage && (
-        <div className="message-container">
-          <h2>Oops, The Lamp is fake, Kelu failed to find the lamp.</h2>
-          <button onClick={handleNext} className="next-button">Next</button>
+        <div className="absolute bottom-20 message-container bg-black bg-opacity-60 rounded-2xl p-2 text-white flex flex-col items-center justify-center">
+          <h2 className="font-semibold text-[20px]">
+            Oops, The Lamp is fake, Kelu failed to find the lamp.
+          </h2>
+          <button onClick={handleNext} className="next-button">
+            Next
+          </button>
         </div>
       )}
+      <img
+        src={puzzleBg}
+        className="absolute top-0 left-0 w-screen h-screen -z-10"
+      ></img>
+      <img src={keluSad} className="absolute left-0 bottom-0 z-50"></img>
     </div>
   );
 };
