@@ -1,39 +1,56 @@
-// Level3.js
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Level3.css'; // Import custom CSS for styling
 
 const Level3 = () => {
-  const [morseDecoded, setMorseDecoded] = useState(false);
-  const [puzzleSolved, setPuzzleSolved] = useState(false);
+  const [stage, setStage] = useState(0); // Track the current stage of the sequence
+  const navigate = useNavigate();
 
-  const handleMorseDecode = () => {
-    setMorseDecoded(true);
-  };
+  useEffect(() => {
+    const timers = [];
 
-  const handlePuzzleSolve = () => {
-    setPuzzleSolved(true);
+    // Stage 1: Fade in "Level 3"
+    timers.push(setTimeout(() => {
+      setStage(1);
+    }, 500)); // Initial fade-in delay
+
+    // Stage 2: Fade out "Level 3"
+    timers.push(setTimeout(() => {
+      setStage(2);
+    }, 3000)); // Duration to display "Level 3"
+
+    // Stage 3: Show "You have reached Level 3..." text with fade-in animation
+    timers.push(setTimeout(() => {
+      setStage(3);
+    }, 4000)); // Delay before showing the next text
+
+    // Cleanup timers on component unmount
+    return () => {
+      timers.forEach(timer => clearTimeout(timer));
+    };
+  }, []);
+
+  const navigateToMorseCode = () => {
+    navigate('/morsecode'); // Navigate to MorseCode page
   };
 
   return (
-    <div className="level3">
-      <h1>Level 3: The Tortoise Forest</h1>
+    <div className="level3-container">
+      {/* Stage 1: Display Level 3 with fade-in animation */}
+      {stage === 1 && (
+        <div className="fade-in level3-title">
+          Level 3
+        </div>
+      )}
 
-      {!morseDecoded ? (
-        <div>
-          <p>Decode the Morse code to continue.</p>
-          <button onClick={handleMorseDecode}>Decode Morse Code</button>
-        </div>
-      ) : !puzzleSolved ? (
-        <div>
-          <p>Calculate the pH and solve the puzzle to cross the river.</p>
-          <button onClick={handlePuzzleSolve}>Solve Puzzle</button>
-        </div>
-      ) : (
-        <div>
-          <p>Ajayan finds the magical lamp!</p>
-          <Link to="/success">
-            <button>Finish the Hunt</button>
-          </Link>
+      {/* Stage 3: Display text and button with fade-in animation */}
+      {stage === 3 && (
+        <div className="fade-in level3-text">
+          <p>You have reached Level 3 of the hunt.</p>
+          <p>You help Third Generation hero AJAYAYAN to find the Lamp.</p>
+          <button className="help-button" onClick={navigateToMorseCode}>
+            Help Ajayan
+          </button>
         </div>
       )}
     </div>

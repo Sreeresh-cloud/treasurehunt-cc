@@ -1,0 +1,45 @@
+.river-container {
+    display: flex;                /* Use flexbox */
+    flex-direction: column;       /* Arrange items in a column */
+    align-items: center;          /* Center items horizontally */
+    justify-content: center;      /* Center items vertically */
+    padding: 20px;
+    min-height: 100vh;           /* Make sure the container takes up the full height of the viewport */
+}
+
+.river-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;           /* Center text */
+}
+
+.river-input,
+.final-input {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;                   /* Adjust width for inputs */
+    max-width: 400px;            /* Set a maximum width */
+}
+
+.submit-button,
+.final-submit-button,
+.help-button,
+.find-way-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover,
+.final-submit-button:hover,
+.help-button:hover,
+.find-way-button:hover {
+    background-color: #45a049; /* Darker green */
+}

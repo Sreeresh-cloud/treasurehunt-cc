@@ -1,0 +1,53 @@
+/* Container styling */
+.level3-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height of the viewport */
+    ; /* Background color */
+    color: black; /* Text color */
+    font-family: Arial, sans-serif; /* Font styling */
+  }
+  
+  /* Fade-in animation */
+  .fade-in {
+    opacity: 0; /* Initial opacity */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Animation duration and easing */
+  }
+  
+  /* Fade-in keyframes */
+  @keyframes fadeIn {
+    to {
+      opacity: 1; /* Final opacity */
+    }
+  }
+  
+  /* Title styling */
+  .level3-title {
+    font-size: 3em; /* Large font size */
+    font-weight: bold; /* Bold text */
+  }
+  
+  /* Text styling */
+  .level3-text {
+    text-align: center; /* Center align text */
+    font-size: 1.5em; /* Medium font size */
+  }
+  
+  /* Button styling */
+  .help-button {
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 20px; /* Button padding */
+    font-size: 1em; /* Font size */
+    color: white; /* Button text color */
+    background-color: #28a745; /* Green button background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+  
+  .help-button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  

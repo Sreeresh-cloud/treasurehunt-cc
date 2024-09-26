@@ -1,0 +1,26 @@
+.fade-in-text {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.direction-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.question-container {
+    margin-top: 20px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}

@@ -41,7 +41,7 @@ const JigsawPuzzlecomponent = () => {
       {/* Lamp will be revealed after the puzzle is solved and pieces fall */}
       {showLamp && (
         <div className="lamp-container">
-          <img src="./lamp.webp" alt="Lamp" className="lamp-image" /> {/* Ensure the image is in the public folder */}
+          <img src="/lamp.webp" alt="Lamp" className="lamp-image" /> {/* Ensure the image is in the public folder */}
         </div>
       )}
 

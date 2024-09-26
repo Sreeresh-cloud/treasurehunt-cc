@@ -1,0 +1,14 @@
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+  }
+  
+  .fade-in p {
+    opacity: 0;
+  }
+  
+  .fade-in p {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+  }
+  

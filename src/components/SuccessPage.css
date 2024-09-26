@@ -1,0 +1,27 @@
+.success-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Full height to center content */
+    background-color: #f0f4c3; /* Light background color for visibility */
+    padding: 20px; /* Padding around the content */
+    font-family: 'Arial', sans-serif; /* Font family */
+    text-align: center; /* Center text */
+}
+
+.success-page h1 {
+    color: #2e7d32; /* Darker shade of green for heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.success-page p {
+    font-size: 1.2em; /* Font size for paragraph */
+    margin: 20px 0; /* Space around paragraph */
+}
+
+.success-page img.qr-code {
+    margin-top: 20px; /* Space above image */
+    width: 150px; /* Reduced width for QR code image */
+    height: auto; /* Maintain aspect ratio */
+}

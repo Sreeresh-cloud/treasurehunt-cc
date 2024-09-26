@@ -12,6 +12,14 @@ import Escape from './components/Escape';
 import Escaped from './components/Escaped';
 import ShrineDoor from './components/ShrineDoor'; 
 import ShrineDoorLocked from './components/ShrineDoorLocked';
+import ShrineDarkRoom from './components/ShrineDarkRoom';
+import MorseCode from './components/MorseCode';
+import River from './components/River'
+import MagicalBridge from './components/MagicalBridge';
+import Ascii from './components/Ascii';
+import Direction from './components/Direction';
+import Climax from './components/Climax';
+import Greetings from './components/Greetings';
 
 
 
@@ -40,7 +48,15 @@ const App = () => {
           <Route path="/escaped" element={<Escaped />} />
           <Route path="/shrine-door" element={<ShrineDoor />} /> {/* Add ShrineDoor route */}
           <Route path="/shrine-door-locked" element={<ShrineDoorLocked />} />
+          <Route path="/shrine-dark-room" element={<ShrineDarkRoom />} />
           <Route path="/level3" element={<Level3 />} />
+          <Route path="/morsecode" element={<MorseCode/>} />
+          <Route path="/river" element={<River />} />
+          <Route path="/magical-bridge" element={<MagicalBridge />} />
+          <Route path="/ascii" element={<Ascii />}/>
+          <Route path="/direction" element={<Direction />} />
+          <Route path="/climax" element={<Climax />} />
+          <Route path="/greetings" element={<Greetings />} />
           <Route path="/success" element={<SuccessPage />} />
 
         </Routes>

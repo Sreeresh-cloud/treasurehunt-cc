@@ -1,0 +1,88 @@
+.shrine-dark-room {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: white; /* Initial text color for dark background */
+    text-align: center;
+    opacity: 0; /* Start with hidden content */
+    transition: opacity 2s ease; /* Smooth fade-in effect */
+  }
+  
+  .shrine-dark-room.fade-in {
+    opacity: 1; /* Fade-in the content */
+  }
+  
+  .question-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .answer-input {
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 16px;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .room-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black; /* Text color for light background */
+    transition: opacity 2s ease, background-color 2s ease;
+    opacity: 0; /* Hidden initially */
+  }
+  
+  .lamp-visible {
+    opacity: 1; /* Show room content */
+  }
+  
+  .lamp-image {
+    width: 150px; /* Adjust size as necessary */
+    margin: 20px 0;
+    opacity: 0;
+    transition: opacity 2s ease; /* Smooth fade-in for lamp */
+  }
+  
+  .lamp-visible .lamp-image {
+    opacity: 1; /* Fade-in lamp image */
+  }
+  
+  .fade-in-text {
+    font-size: 1.5rem;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 2s ease; /* Smooth fade-in for text */
+  }
+  
+  .room-light .fade-in-text {
+    opacity: 1; /* Fade-in text */
+  }
+
+ 
+
+
+  .next-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .next-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  

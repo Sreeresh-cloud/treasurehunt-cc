@@ -1,0 +1,32 @@
+.fade-in {
+    animation: fadeIn 1s ease-in-out forwards; /* 1 second fade-in effect */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.climax-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.lift-lamp-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.lift-lamp-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
