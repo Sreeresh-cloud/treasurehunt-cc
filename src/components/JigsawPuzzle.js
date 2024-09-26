@@ -26,7 +26,7 @@ const JigsawPuzzlecomponent = () => {
 
   return (
     <div className="app-container">
-      <h1>Jigsaw Puzzle</h1>
+      <h1>The Lamp is hidden Somewhere. Find it </h1>
 
       {/* Jigsaw puzzle container with falling animation */}
       <div className={`jigsaw-container ${isSolved ? 'falling-puzzle' : ''}`}>
