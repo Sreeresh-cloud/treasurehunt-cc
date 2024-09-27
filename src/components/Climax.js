@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./Climax.css"; // Import your CSS for styling
 
+import climaxBg from "../images/climaxBg.png";
+
 const Climax = () => {
   const [currentText, setCurrentText] = useState(0); // Track current text index
   const [showButton, setShowButton] = useState(false); // Track button visibility
@@ -34,7 +36,7 @@ const Climax = () => {
 
   return (
     <div className="climax-container">
-      <div className={`fade-in`}>
+      <div className="fade-in bg-black bg-opacity-40 rounded-2xl text-white p-2">
         <p>{texts[currentText]}</p>
       </div>
       {currentText === texts.length - 1 && showButton && (
@@ -42,6 +44,11 @@ const Climax = () => {
           Lift the Lamp
         </button>
       )}
+
+      <img
+        src={climaxBg}
+        className="absolute top-0 left-0 w-screen h-screen -z-10"
+      ></img>
     </div>
   );
 };

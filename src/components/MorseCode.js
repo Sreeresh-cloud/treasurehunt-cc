@@ -51,7 +51,7 @@ const MorseCode = () => {
           </strong>
           <input
             type="text"
-            className="morsecode-input"
+            className="morsecode-input outline-none"
             value={input}
             onChange={handleChange}
             placeholder="Enter your answer here"

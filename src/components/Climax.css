@@ -13,11 +13,11 @@
 
 .climax-container {
     text-align: center;
-    margin: 20px;
+    padding: 20px;
 }
 
 .lift-lamp-button {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;

@@ -81,7 +81,7 @@ const River = () => {
           </div>
           <input
             type="text"
-            className="river-input text-black"
+            className="river-input text-black outline-none"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Enter your pH calculation here"
@@ -99,7 +99,7 @@ const River = () => {
           </div>
           <input
             type="text"
-            className="final-input text-black"
+            className="final-input text-black outline-none"
             value={finalInput}
             onChange={(e) => setFinalInput(e.target.value)}
             placeholder="Enter your conclusion here"

@@ -4,6 +4,8 @@ import unlockedDoorImage from "../images/unlocked-door.png";
 import "./Level1.css";
 import DarkRoom from "./DarkRoom"; // Import the DarkRoom component
 
+import doubleDoor from '../images/doubleDoor.jpg'
+
 const Level1 = () => {
   const [pinEntered, setPinEntered] = useState(false);
   const [doorSliding, setDoorSliding] = useState(false);
@@ -30,7 +32,7 @@ const Level1 = () => {
             className={`door-container ${pinEntered ? "door-unlocked" : ""}`}
           >
             <img
-              src={lockedDoorImage}
+              src={doubleDoor}
               alt={pinEntered ? "Unlocked Door" : "Locked Door"}
               // className="door-image"
               className={`absolute clip-half-left  h-full door-left transition-transform duration-[3s] ${
@@ -39,7 +41,7 @@ const Level1 = () => {
               // style={{ backgroundImage: "url(/path-to-your-door-image)" }}
             />
             <img
-              src={lockedDoorImage}
+              src={doubleDoor}
               alt={pinEntered ? "Unlocked Door" : "Locked Door"}
               // className="door-image"
               className={`absolute clip-half-right h-full door-right transition-transform duration-[3s] right-0 ${

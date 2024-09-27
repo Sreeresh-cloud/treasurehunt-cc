@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh; /* Full height to center content */
-    background-color: #f0f8ff; /* Light background color */
+    /* background-color: #f0f8ff; */
     padding: 20px; /* Padding around the content */
     text-align: center; /* Center text alignment */
     font-family: 'Arial', sans-serif; /* Font family */
@@ -13,7 +13,7 @@
 .greetings-container p {
     font-size: 1.2em; /* Adjust font size */
     margin: 20px 0; /* Space between paragraphs */
-    color: #333; /* Dark color for readability */
+    /* color: #333; */
 }
 
 .greetings-container strong {

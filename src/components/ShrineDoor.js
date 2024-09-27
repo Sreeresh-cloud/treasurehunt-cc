@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ShrineDoor.css"; // Add custom CSS for styling
-import shrineDoor from "../images/shrineDoor.png";
+import shrineDoor from "../images/shrineDoorBg.png";
 
 const ShrineDoor = () => {
   const [inputValue, setInputValue] = useState(""); // To store user input
