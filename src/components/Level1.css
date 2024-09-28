@@ -119,11 +119,25 @@
   .unlocking-message {
     font-size: 1.3em; /* Scale down unlocking message for tablets */
   }
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%; /* Use a percentage for responsiveness */
+    max-width: 300px; /* Limit max width for larger screens */
+  }
 }
 
 @media (max-width: 400px) {
   .unlocking-message {
     font-size: 1.1em; /* Scale down unlocking message for small screens */
+  }
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%; /* Use a percentage for responsiveness */
+    max-width: 300px; /* Limit max width for larger screens */
   }
 }
 
