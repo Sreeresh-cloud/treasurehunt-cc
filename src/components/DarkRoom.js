@@ -77,7 +77,7 @@ const DarkRoom = () => {
           <h2>There are a few strange switches scattered around the dim room. He must find the correct switch to light up the room to unravel the mystery. Turn on the correct switch below to light up the room.</h2>
           <h3>ALERT!! KELU ONLY HAVE 3 CHANCES. ONCE HE IS OUT OF CHANCE, HE WOULD BE TRAPPED INSIDE THE DARKNESS FOREVER</h3>
           <p className="hint-text">
-            Hint: What do you get when you multiply the number of faces of a cube by the number of vertices of a triangle?
+            Hint: If a clock shows the correct time once a day but loses 1 hour every day, what is the total number of hours in 12 days?
           </p>
           <div className="matrix-container">
             {buttons.map((number, index) => (
