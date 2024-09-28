@@ -64,13 +64,15 @@ const Level1 = () => {
       {/* Conditionally render the DarkRoom component */}
       {showDarkRoom && <DarkRoom />}
 
-      {/* Always show the hint button */}
-      <button
-        onClick={() => window.open("https://google.com/404.html", "_blank")}
-       className="absolute text-white bg-orange-500 hover:bg-orange-600 transition-all py-2 px-4 rounded z-50"
-      >
-        Hint
-      </button>
+      {/* Conditionally render the Hint button based on pinEntered state */}
+      {!pinEntered && (
+        <button
+          onClick={() => window.open("https://google.com/404.html", "_blank")}
+          className="absolute text-white bg-orange-500 hover:bg-orange-600 transition-all py-2 px-4 rounded z-50"
+        >
+          Hint
+        </button>
+      )}
     </div>
   );
 };
