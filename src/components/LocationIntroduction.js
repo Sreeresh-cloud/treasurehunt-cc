@@ -8,7 +8,7 @@ const LocationIntroduction = () => {
   return (
     <div className="locIntroduction">
       <div className="content ml-10">
-        <h1 className='font-bold text-[40px]'>Welcome to the Palace</h1>
+        <h1 className='font-bold text-[20px]'>Welcome to the Palace</h1>
         <p className = 'text-[10px]'>
          In a magical land, there exists a legendary lamp that can grant the wishes of anyone brave enough to find it. However, many adventurers have tried to seek the lamp and have never returned. Our first hero, Kunjikelu, is determined to uncover its secrets. As he journeys through this enchanted world, he encounters a massive door leading to a beautiful palace, adorned with sparkling gems and intricate designs.
         </p>
