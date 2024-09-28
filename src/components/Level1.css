@@ -48,15 +48,24 @@
   height: 70vh;
   transition: all 1s ease; /* Smooth transition for unlocking */
 }
+
+@media (max-width: 768px) {
+  .door-container {
+    width: 80vw; /* Increase width for tablets */
+    height: 60vh; /* Adjust height for tablets */
+  }
+}
+
 @media (max-width: 400px) {
   .door-container {
-    width: 90%;
+    width: 90%; /* Increase width for small screens */
+    height: 50vh; /* Adjust height for small screens */
   }
 }
 
 /* Door unlocked effect */
 .door-container.door-unlocked {
-  transform: scale(1.5); /* Slight zoom effect when unlocked */
+  transform: scale(1.1); /* Slight zoom effect when unlocked */
   opacity: 0.8; /* Slight fade effect when unlocked */
 }
 
@@ -68,8 +77,6 @@
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3); /* Glow effect */
 }
-
-
 
 /* Container for the PIN input and buttons */
 .input-container {
@@ -85,6 +92,18 @@
   margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+  .input-container h1 {
+    font-size: 1.8em; /* Scale down title for tablets */
+  }
+}
+
+@media (max-width: 400px) {
+  .input-container h1 {
+    font-size: 1.5em; /* Scale down title for small screens */
+  }
+}
+
 /* Style for the unlock message */
 .unlocking-message {
   position: absolute;
@@ -94,6 +113,18 @@
   color: #fff;
   font-size: 1.5em;
   animation: fadeIn 1.5s ease; /* Fade in effect */
+}
+
+@media (max-width: 768px) {
+  .unlocking-message {
+    font-size: 1.3em; /* Scale down unlocking message for tablets */
+  }
+}
+
+@media (max-width: 400px) {
+  .unlocking-message {
+    font-size: 1.1em; /* Scale down unlocking message for small screens */
+  }
 }
 
 /* Keyframe animation for fading in */
@@ -111,6 +142,8 @@ input[type="text"] {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  width: 80%; /* Use a percentage for responsiveness */
+  max-width: 300px; /* Limit max width for larger screens */
 }
 
 /* Background styling for DarkRoom component */
@@ -144,5 +177,5 @@ input[type="text"] {
   clip-path: inset(0 50% 0 0); /* Shows left half of the image */
 }
 .clip-half-right {
-  clip-path: inset(0 0 0 50%); /* Shows left half of the image */
+  clip-path: inset(0 0 0 50%); /* Shows right half of the image */
 }
