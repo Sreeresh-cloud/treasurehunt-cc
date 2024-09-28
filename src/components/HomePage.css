@@ -51,11 +51,11 @@
   }
 
   h1 {
-    font-size: 1.6rem; /* Further decreased heading size */
+    font-size: 20px; /* Further decreased heading size */
   }
 
   p {
-    font-size: 0.9rem; /* Decrease paragraph size */
+    font-size: 10px; /* Decrease paragraph size */
   }
 
   .start-button {

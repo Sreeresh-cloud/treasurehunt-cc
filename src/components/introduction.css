@@ -41,7 +41,7 @@
 .button {
   color: black;
   padding: 6px 12px; /* Further adjusted padding */
-  font-size: 0.6rem; /* Reduced button font size */
+  font-size: 0.8rem; /* Reduced button font size */
   background-color: #ffcc00; /* Adventure theme color */
   border: none;
   border-radius: 5px;
