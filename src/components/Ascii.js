@@ -75,8 +75,9 @@ const Ascii = () => {
                 bonds. Help Ajayan to convert the spell into ASCII code, so he
                 can set the ghost free and gain entry into the cave.
               </p>
-              <button onClick={playAudio}>Clue</button>
-              <div>
+              <button style="background-color: #ff6600; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: background-color 0.3s ease;" onClick={playAudio}>
+  Clue
+</button>              <div>
                 <p>Use the clue below:</p>
                 <ul>
                   <li>u: 117</li>

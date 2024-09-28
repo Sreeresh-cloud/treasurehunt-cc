@@ -21,7 +21,7 @@ const Escape = () => {
     ) {
       navigate("/escaped"); // Navigate to the 'Escaped' page if the input is correct
     } else {
-      alert('Incorrect input! Try "escape" or "esc".'); // Alert if the input is incorrect
+      alert('Incorrect input! .'); // Alert if the input is incorrect
     }
   };
 

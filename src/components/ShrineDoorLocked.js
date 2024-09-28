@@ -42,11 +42,11 @@ const ShrineDoorLocked = () => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Identify the film from which this iconic line is taken"
+          placeholder="Identify the film "
           value={inputValue}
           onChange={handleInputChange}
           className="answer-input"
-          style={{ width: '500px', height: 'auto', transform: 'translateY(-100px)' }}
+          style={{ width: '800px', height: 'auto', transform: 'translateY(-100px)' }}
         />
         <button type="submit" className="submit-button" style={{ width: '100px', height: 'auto', transform: 'translateY(-100px)' }}>Submit</button>
       </form>
