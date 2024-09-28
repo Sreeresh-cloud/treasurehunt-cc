@@ -1,32 +1,43 @@
-.fade-in {
-    animation: fadeIn 1s ease-in-out forwards; /* 1 second fade-in effect */
-}
-
-@keyframes fadeIn {
+/* Climax.css */
+.climax-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    transition: background-image 1s ease-in-out; /* Smooth transition for background image */
+  }
+  
+  .fade-in {
+    animation: fadeIn 1.5s ease; /* Animation for text fade-in */
+  }
+  
+  @keyframes fadeIn {
     from {
-        opacity: 0;
+      opacity: 0;
     }
     to {
-        opacity: 1;
+      opacity: 1;
     }
-}
-
-.climax-container {
-    text-align: center;
-    padding: 20px;
-}
-
-.lift-lamp-button {
-    /* margin-top: 20px; */
+  }
+  
+  .lift-lamp-button {
     padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4CAF50; /* Green */
+    font-size: 1em;
     color: white;
+    background-color: #28a745; /* Green background */
     border: none;
-    border-radius: 5px;
-}
-
-.lift-lamp-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px;
+  }
+  
+  .lift-lamp-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slight increase in size */
+  }
+  

@@ -1,4 +1,3 @@
-// ShrineDoor.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ShrineDoor.css"; // Add custom CSS for styling
@@ -27,9 +26,9 @@ const ShrineDoor = () => {
   };
 
   return (
-    <div className="shrine-container">
+    <div className="shrine-container fade-in"> {/* Apply fade-in class here */}
       <div className="bg-black bg-opacity-60 text-white p-5 rounded-2xl w-full">
-      <h1>Shrine Door</h1>
+        <h1>Shrine Door</h1>
         <p className="text-[14px]">
           Maniyan reached the shrine and finds the door is being guarded by many
           eagles.
@@ -37,8 +36,7 @@ const ShrineDoor = () => {
         <p>FIND THE NUMBER OF EAGLES WHICH GUARDS THE SHRINE:</p>
         <div className="riddle-box">
           <p className="text-black">
-            "We as a group and again as ourselves, half of us, half of the rest
-            and you become a 100. How many of us are here?"
+            "ഇവിടെ ഞങ്ങളും, ഞങ്ങളും ഞങ്ങളുടെ പകുതിയും പകുതിയുടെ പകുതിയും നീയും ചേർന്നാൽ 100"
           </p>
         </div>
 
@@ -57,9 +55,8 @@ const ShrineDoor = () => {
           </form>
         ) : (
           <>
-            <p> Maniyan Successfully Crossed the Eagle Guard </p>
+            <p>Maniyan Successfully Crossed the Eagle Guard</p>
             <button onClick={handleNext} className="next-button">
-              {" "}
               Go near the Door
             </button>
           </>
@@ -68,8 +65,9 @@ const ShrineDoor = () => {
 
       <img
         src={shrineDoor}
-        className="absolute top-0 left-0 w-screen h-screen -z-10"
-      ></img>
+        className="absolute top-0 left-0 w-screen h-screen -z-10 fade-in-bg" // Apply fade-in class to the image
+        alt="Shrine Door Background" // Add alt attribute for accessibility
+      />
     </div>
   );
 };

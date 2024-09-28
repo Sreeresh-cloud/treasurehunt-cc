@@ -12,8 +12,8 @@ const Escaped = () => {
   };
 
   return (
-    <div className="p-10 w-screen flex">
-      <div className="bg-black bg-opacity-60 text-white p-5 rounded-2xl w-full">
+    <div className="p-10 w-screen flex relative"> {/* Add relative position for absolute image */}
+      <div className="escaped-container"> {/* Apply the escaped-container class */}
         <h1>Maniyan Escaped!</h1>
         <p>Maniyan successfully escaped from the attacking crowd.</p>
 
@@ -26,7 +26,8 @@ const Escaped = () => {
       <img
         src={maniyanCrowded2}
         className="absolute top-0 left-0 w-screen h-screen -z-10"
-      ></img>
+        alt="Crowded Scene" // Add alt attribute for accessibility
+      />
     </div>
   );
 };

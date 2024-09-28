@@ -25,3 +25,18 @@
     width: 150px; /* Reduced width for QR code image */
     height: auto; /* Maintain aspect ratio */
 }
+
+/* SuccessPage.css */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 2s ease-in-out; /* 2 seconds for the animation duration */
+  }
+  

@@ -1,39 +1,87 @@
-
 .introduction {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('../images/introductionBg.jpg');
-    height: 100vh; /* Full height of the viewport */
-    background-size: contain;
-    background-position: center;
-    text-align: center; /* Center the text */
-    color: white; /* Change text color to white for better contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height of the viewport */
+  background-size: contain;
+  background-position: center;
+  text-align: center; /* Center the text */
+  color: white; /* Change text color to white for better contrast */
+  animation: fadeIn 1.5s ease-in-out; /* Apply fade-in animation */
+}
+
+/* Define the fade-in keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  .imageContainer {
-    flex: 1;
-    margin-right: 20px;
+  100% {
+    opacity: 1;
   }
-  
-  .image {
-    width: 300px; /* Adjust size as needed */
-    height: auto;
+}
+
+.imageContainer {
+  flex: 1;
+  margin-right: 20px;
+  opacity: 0;
+  animation: imageFadeIn 2s ease-in-out 0.5s forwards; /* Delayed fade-in for image */
+}
+
+.image {
+  width: 300px; /* Adjust size as needed */
+  height: auto;
+}
+
+.textContainer {
+  flex: 2;
+  opacity: 0;
+  animation: textFadeIn 2s ease-in-out 1s forwards; /* Delayed fade-in for text */
+}
+
+.button {
+  color: black;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ffcc00; /* Adventure theme color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+  opacity: 0;
+  animation: buttonFadeIn 2s ease-in-out 1.5s forwards; /* Delayed fade-in for button */
+}
+
+/* Additional fade-in animations for elements */
+@keyframes imageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Optional: slight movement */
   }
-  
-  .textContainer {
-    flex: 2;
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Back to original position */
   }
-  
-  .button {
-    color: black;
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #ffcc00; /* Adventure theme color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s;
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Optional: slight movement */
   }
-  
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Back to original position */
+  }
+}
+
+@keyframes buttonFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8); /* Optional: slight scaling */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Back to original size */
+  }
+}

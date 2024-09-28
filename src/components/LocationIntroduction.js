@@ -10,9 +10,7 @@ const LocationIntroduction = () => {
       <div className="content ml-10">
         <h1 className='font-bold'>Welcome to the Palace</h1>
         <p>
-          I am Kunjikelu, and my mission is to find the magical lamp hidden deep within the palace. 
-          The lamp holds immense power and is said to grant wishes to those who possess it. 
-          Join me on this adventure as we unravel the mysteries of the palace and face the challenges ahead.
+         In a magical land, there exists a legendary lamp that can grant the wishes of anyone brave enough to find it. However, many adventurers have tried to seek the lamp and have never returned. Our first hero, Kunjikelu, is determined to uncover its secrets. As he journeys through this enchanted world, he encounters a massive door leading to a beautiful palace, adorned with sparkling gems and intricate designs.
         </p>
         <Link to="/level1">
           <button className="help-button">Help Kunjikelu</button>

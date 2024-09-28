@@ -37,12 +37,10 @@ const ShrineDarkRoom = () => {
   const handleQuestionSubmit = (e) => {
     e.preventDefault();
     if (parseFloat(inputValue) === 3.1) {
-      // Convert to float for comparison
       document.body.style.transition = "background-color 2s ease";
       document.body.style.backgroundColor = "#f5f5f5";
 
       setRoomLightened(true);
-      // setQuestionVisible(false)
       setTimeout(() => {
         setLampVisible(true);
         setTimeout(() => {
@@ -75,8 +73,8 @@ const ShrineDarkRoom = () => {
           </h2>
           <form onSubmit={handleQuestionSubmit}>
             <input
-              type="number" // Change to number type for float input
-              step="0.01" // Allow decimal values
+              type="number"
+              step="0.01"
               placeholder="Ampere"
               value={inputValue}
               onChange={handleInputChange}
@@ -86,8 +84,6 @@ const ShrineDarkRoom = () => {
               Submit
             </button>
           </form>
-          {/* Echoing Effect: Displaying the current input value below the input field */}
-          {/* <div className="echo-display">{inputValue}</div> */}
         </div>
       )}
       {roomLightened && (
@@ -99,17 +95,22 @@ const ShrineDarkRoom = () => {
           {lampVisible && (
             <>
               <img
-                src={vilakku} // Replace with your lamp image path
+                src={vilakku}
                 alt="Lamp"
                 className="lamp-image"
               />
               {textVisible && (
                 <>
                   <p className="fade-in-text text-white">
-                    Finally, Maniyan Finds the Lamp.
+                   Finally, The Lamp revealed. 
                   </p>
                   <p className="fade-in-text text-white">
-                    Oops, But the Lamp is fake
+                  But, He discovers that the lamp is nothing but a clever fake.                  </p>
+                  <p className="fade-in-text text-white">
+                    It is not the orginal treasure he seeks
+                   </p>
+                  <p className="fade-in-text text-white">
+                    Congrats, You have completed the Second Level
                   </p>
                   <button className="next-button" onClick={handleNextClick}>
                     Next
@@ -120,13 +121,13 @@ const ShrineDarkRoom = () => {
           )}
         </div>
       )}
-
       <img
         src={roomLightened ? lightRoom : darkRoom}
         className="absolute top-0 left-0 w-screen h-screen -z-10"
-      ></img>
+        alt="Room Background"
+      />
       {textVisible && (
-        <img src={maniyanSad} className="absolute left-0 bottom-0"></img>
+        <img src={maniyanSad} className="absolute left-0 bottom-0" alt="Sad Maniyan" />
       )}
     </div>
   );

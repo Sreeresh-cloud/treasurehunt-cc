@@ -1,24 +1,51 @@
+/* Level 2 Container */
 .level2-container {
-    text-align: center;
-    /* padding: 20px; */
-    /* background-color: #f8f9fa; */
-    /* border-radius: 10px; */
-    /* width: 80%; */
-    /* margin: 50px auto; */
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.5s ease forwards; /* Fade-in animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0; /* Start fully transparent */
   }
-  
-  .skip-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none; 
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
+  100% {
+      opacity: 1; /* End fully opaque */
   }
-  
-  .skip-button:hover {
-    background-color: #0056b3;
+}
+
+/* Styling for the skip button */
+.skip-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none; 
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.5s ease forwards; /* Fade-in animation for the button */
+  animation-delay: 0.5s; /* Delay the button animation slightly */
+}
+
+/* Skip button hover effect */
+.skip-button:hover {
+  background-color: #0056b3;
+}
+
+/* Level2.css */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out; /* Adjust duration as needed */
+}
+

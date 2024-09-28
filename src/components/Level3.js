@@ -39,15 +39,15 @@ const Level3 = () => {
       {/* Stage 1: Display Level 3 with fade-in animation */}
       {stage === 1 && (
         <div className="fade-in level3-title">
-          Level 3
+          The Final Level
         </div>
       )}
 
       {/* Stage 3: Display text and button with fade-in animation */}
       {stage === 3 && (
         <div className="fade-in level3-text">
-          <p>You have reached Level 3 of the hunt.</p>
-          <p>You help Third Generation hero AJAYAYAN to find the Lamp.</p>
+          <p>You have reached the final level of the hunt.</p>
+          <p>The Third Generation Hero, Ajayan needs your help to get the magical lamp.</p>
           <button className="help-button" onClick={navigateToMorseCode}>
             Help Ajayan
           </button>

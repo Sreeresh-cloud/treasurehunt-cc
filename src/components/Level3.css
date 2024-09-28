@@ -5,7 +5,10 @@
     align-items: center;
     justify-content: center;
     height: 100vh; /* Full height of the viewport */
-    ; /* Background color */
+    background-image: url('../images/level3.jpg');; /* Background color */
+    background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
     color: black; /* Text color */
     font-family: Arial, sans-serif; /* Font styling */
   }
@@ -16,12 +19,6 @@
     animation: fadeIn 1.5s ease-in-out forwards; /* Animation duration and easing */
   }
   
-  /* Fade-in keyframes */
-  @keyframes fadeIn {
-    to {
-      opacity: 1; /* Final opacity */
-    }
-  }
   
   /* Title styling */
   .level3-title {
@@ -49,5 +46,20 @@
   
   .help-button:hover {
     background-color: #218838; /* Darker green on hover */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Start slightly below */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* End at original position */
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1.5s ease-in-out; /* Adjust duration as needed */
   }
   

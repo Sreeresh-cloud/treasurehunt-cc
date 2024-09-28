@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import lockedDoorImage from "../images/locked-door.png";
-import unlockedDoorImage from "../images/unlocked-door.png";
+//import lockedDoorImage from "../images/locked-door.png";
+//import unlockedDoorImage from "../images/unlocked-door.png";
 import "./Level1.css";
 import DarkRoom from "./DarkRoom"; // Import the DarkRoom component
 
@@ -53,8 +53,8 @@ const Level1 = () => {
 
           {!pinEntered && (
             <div className="input-container w-full">
-              <h1 className="-mt-14 sm:-mt-2 font-bold">
-                Level 1: The Closed Door
+              <h1 className="-mt-14 sm:-mt-2 font-bold" style={{ color: '#FFA500' }}>
+              The door is locked tight. Help Kelu break through this door and reach the lamp!
               </h1>
               {/* <p className="mt-96">Enter pin to open:</p> */}
 
@@ -75,9 +75,10 @@ const Level1 = () => {
 
       {!pinEntered && (
         <a
-          onClick={() => window.open("https://http.cat/404", "_blank")}
+          onClick={() => window.open("https://google.com/404.html", "_blank")}
           // style={{ marginBottom: "10px" }}
-          className="absolute top-[53%] right-[20%] sm:top-[23rem] sm:right-[41rem] text-white opacity-15 cursor-pointer hover:scale-[1.01] transition-all z-50"
+          className="absolute top-[53%] right-[20%] sm:top-[23rem] sm:right-[41rem] text-white opacity-15 cursor-pointer hover:scale-[1.01] transition-all z-50 light-grey-text"
+          style={{ color: "#d3d3d3" }} 
         >
           Hint
         </a>

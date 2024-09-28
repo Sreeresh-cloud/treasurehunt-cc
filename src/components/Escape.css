@@ -18,7 +18,7 @@
   
   .escape-button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: blue;
     color: white;
     border: none;
     border-radius: 5px;
@@ -28,5 +28,18 @@
   
   .escape-button:hover {
     background-color: #0056b3;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 2s ease-in-out; /* Adjust duration as needed */
   }
   

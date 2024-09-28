@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for routing
-//import './Escape.css'; // Import CSS for the escape page
+import "./Escape.css"; // Import CSS for the escape page
 import maniyanCrowded from "../images/maniyanCrowded.jpg";
 
 const Escape = () => {
@@ -26,19 +26,18 @@ const Escape = () => {
   };
 
   return (
-    <div className="flex w-screen h-screen items-end p-10">
+    <div className="flex w-screen h-screen items-end p-10 fade-in"> {/* Apply the fade-in class */}
       <div className="bg-black bg-opacity-60 rounded-2xl p-5 w-1/2">
-        <h1 className="font-bold">Escape: The Attack</h1>
+        <h1 className="font-bold text-white">Escape: The Attack</h1>
         <p className="text-white">
-          Maniyan is surrounded by a group of attacking villagers! He needs to
-          escape before it's too late. Help Maniyan find a way out...
+          As Maniyan enters the bustling market, he hopes his disguise will keep him hidden, but it doesn’t take long for the whispers to start. People recognize him, pointing and murmuring his name. Realizing he’s in danger and that he must escape from the locals quickly. Maniyan needs your help.
         </p>
 
         {/* Form for entering escape input */}
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="A keyword to go back"
+            placeholder="A key in the Keyboard"
             value={inputValue}
             onChange={handleInputChange}
             className="escape-input"
@@ -51,8 +50,9 @@ const Escape = () => {
 
       <img
         src={maniyanCrowded}
-        className="absolute top-0 left-0 w-screen h-screen -z-10"
-      ></img>
+        className="absolute top-0 left-0 w-screen h-screen object-cover -z-10"
+        alt="Crowded Market"
+      />
     </div>
   );
 };

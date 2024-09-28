@@ -1,5 +1,15 @@
 /* Level1.css */
 
+/* Keyframe animation for fading in */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* Basic styling for the level container */
 .level1 {
   position: relative;
@@ -10,6 +20,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden; /* Prevent scrolling during animations */
+  animation: pageFadeIn 1.5s ease forwards; /* Add fade-in animation */
 }
 
 /* Styling for the door overlay */
@@ -25,7 +36,6 @@
   z-index: 2; /* Ensure it's above the background */
 }
 
-
 /* Slide-out effect for the door */
 .door-overlay.slide-out {
   transform: translateX(100%); /* Slide the door overlay out of the viewport */
@@ -39,9 +49,9 @@
   transition: all 1s ease; /* Smooth transition for unlocking */
 }
 @media (max-width: 400px) {
-.door-container {
-  width: 90%;
-}
+  .door-container {
+    width: 90%;
+  }
 }
 
 /* Door unlocked effect */
@@ -94,12 +104,9 @@
   }
 }
 
-
 /* Input field styling */
 input[type="text"] {
   padding: 10px;
-  /* font-size: 1em; */
-  /* margin-bottom: 20px; */
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -120,13 +127,16 @@ input[type="text"] {
   animation: fadeInBackground 1.5s ease forwards; /* Fade in effect for DarkRoom */
 }
 
+.light-grey-text {
+  color: #d3d3d3; /* Mild light grey color */
+}
+
 /* Fade-in animation for DarkRoom background */
 @keyframes fadeInBackground {
   to {
     opacity: 1;
   }
 }
-
 
 .clip-half-left {
   clip-path: inset(0 50% 0 0); /* Shows left half of the image */

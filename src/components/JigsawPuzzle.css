@@ -1,55 +1,73 @@
 /* Container for the entire app */
 .app-container {
-    display: flex;
-    flex-direction: column;
-    gap: 90px;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  align-items: center;
+  margin-top: 20px;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.5s ease forwards; /* Fade-in animation */
+}
+
+/* Fade-in animation for the entire app */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start fully transparent */
   }
-  
-  /* Styling for the jigsaw puzzle container with smaller dimensions */
-  .jigsaw-container {
-    position: relative;
-    width: 250px; /* Reduced width */
-    height: 250px; /* Reduced height */
-    transition: transform 1.5s ease-in-out;
+  100% {
+    opacity: 1; /* End fully opaque */
   }
-  
-  /* Apply this class to make the puzzle pieces fall down */
-  .falling-puzzle {
-    transform: translateY(400px); /* Adjust the distance based on the reduced size */
-    opacity: 0; /* Fade out the puzzle as it falls */
+}
+
+/* Styling for the jigsaw puzzle container with smaller dimensions */
+.jigsaw-container {
+  position: relative;
+  width: 250px; /* Reduced width */
+  height: 250px; /* Reduced height */
+  transition: transform 1.5s ease-in-out;
+}
+
+/* Apply this class to make the puzzle pieces fall down */
+.falling-puzzle {
+  transform: translateY(400px); /* Adjust the distance based on the reduced size */
+  opacity: 0; /* Fade out the puzzle as it falls */
+}
+
+/* Style for the individual puzzle piece images */
+.jigsaw-puzzle__piece img {
+  object-fit: cover; /* Ensure image scales correctly within puzzle piece */
+  width: 100%; /* Ensure the image fits within the piece */
+  height: 100%;
+}
+
+/* Container for the lamp */
+.lamp-container {
+  margin-top: 20px;
+  opacity: 0; /* Initially hidden */
+  animation: revealLamp 1.5s ease-in-out forwards;
+}
+
+/* Lamp reveal animation */
+@keyframes revealLamp {
+  0% {
+    opacity: 0;
+    transform: scale(0.5); /* Start smaller */
   }
-  
-  /* Style for the individual puzzle piece images */
-  .jigsaw-puzzle__piece img {
-    object-fit: cover; /* Ensure image scales correctly within puzzle piece */
-    width: 100%; /* Ensure the image fits within the piece */
-    height: 100%;
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Full size at the end */
   }
-  
-  /* Container for the lamp */
-  .lamp-container {
-    margin-top: 20px;
-    opacity: 0; /* Initially hidden */
-    animation: revealLamp 1.5s ease-in-out forwards;
-  }
-  
-  /* Lamp reveal animation */
-  @keyframes revealLamp {
-    0% {
-      opacity: 0;
-      transform: scale(0.5); /* Start smaller */
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1); /* Full size at the end */
-    }
-  }
-  
-  /* Lamp image styling */
-  .lamp-image {
-    width: 80px; /* Reduced size for the lamp image */
-    height: auto;
-  }
-  
+}
+
+/* Lamp image styling */
+.lamp-image {
+  width: 80px; /* Reduced size for the lamp image */
+  height: auto;
+}
+
+/* Optional: If you want to add a fade-in effect specifically for the message container */
+.message-container {
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 1s ease forwards; /* Fade in for the message */
+  transform: translateX(190px);
+}

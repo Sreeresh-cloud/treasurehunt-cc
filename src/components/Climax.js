@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import "./Climax.css"; // Import your CSS for styling
 
-import climaxBg from "../images/climaxBg.png";
+// Import your background images
+import climaxBg1 from "../images/Interior1.jpg";
+import climaxBg2 from "../images/cave3.jpg";
+import climaxBg3 from "../images/Interior3.jpg";
+import climaxBg4 from "../images/climaxBg.png";
 
 const Climax = () => {
   const [currentText, setCurrentText] = useState(0); // Track current text index
@@ -15,10 +19,12 @@ const Climax = () => {
   ];
   const navigate = useNavigate(); // Initialize useNavigate
 
+  // Background images corresponding to each text
+  const backgrounds = [climaxBg1, climaxBg2, climaxBg3, climaxBg4];
+
   useEffect(() => {
     if (currentText < texts.length) {
       const timer = setTimeout(() => {
-        // When displaying the fourth text, show the button and stop advancing
         if (currentText === texts.length - 1) {
           setShowButton(true); // Show button for the fourth text
         } else {
@@ -35,7 +41,15 @@ const Climax = () => {
   };
 
   return (
-    <div className="climax-container">
+    <div
+      className="climax-container"
+      style={{
+        backgroundImage: `url(${backgrounds[currentText]})`, // Dynamic background image
+        backgroundSize: "cover", // Make sure the background covers the container
+        backgroundPosition: "center", // Center the background image
+        backgroundRepeat: "no-repeat", // Avoid repeating the image
+      }}
+    >
       <div className="fade-in bg-black bg-opacity-40 rounded-2xl text-white p-2">
         <p>{texts[currentText]}</p>
       </div>
@@ -44,11 +58,6 @@ const Climax = () => {
           Lift the Lamp
         </button>
       )}
-
-      <img
-        src={climaxBg}
-        className="absolute top-0 left-0 w-screen h-screen -z-10"
-      ></img>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"; // Import useNavigate for routin
 import "./MorseCode.css"; // Custom styling
 import MorseCodeBg from "../images/morseCodeBg.jpg";
 import ajayan from "../images/ajayan.png";
+import lakshmi from "../images/lakshmi.png"
 
 const MorseCode = () => {
   const [input, setInput] = useState("");
@@ -31,9 +32,9 @@ const MorseCode = () => {
   };
 
   return (
-    <div className="morsecode-container">
+    <div className="morsecode-container" >
       {!isCorrect && (
-        <div className="bg-black bg-opacity-70 rounded-2xl p-5 w-1/2 text-white sm:mr-20">
+        <div className="bg-black bg-opacity-70 rounded-2xl p-5 w-1/2 text-white sm:mr-20"   style={{ transform: 'translateX(40px)' }}>
           <div className="morsecode-stor">
             <p>
               Ajayan, a skilled radio mechanic living in a small village, hears
@@ -62,13 +63,16 @@ const MorseCode = () => {
         </div>
       )}
       {message && (
-        <div className="bg-black bg-opacity-70 rounded-2xl p-5 w-1/2 text-white sm:mr-20">
+        <div className="bg-black bg-opacity-70 rounded-2xl p-5 w-1/2 text-white sm:mr-20"  style={{ transform: 'translateX(40px)' }}>
           {message && <div className="morsecode-message">{message}</div>}
           {/* Render the Travel button only if the answer is correct */}
           {isCorrect && (
-            <button className="travel-button" onClick={handleTravel}>
-              Travel to Tortoise Forest
-            </button>
+            <button
+            className="travel-button bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-2 px-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-lg hover:from-green-500 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50"
+            onClick={handleTravel}
+          >
+            Travel to Tortoise Forest
+          </button>
           )}
         </div>
       )}
@@ -77,6 +81,7 @@ const MorseCode = () => {
         className="absolute top-0 left-0 w-screen h-screen -z-10"
       ></img>
       <img src={ajayan} className="absolute bottom-0 left-0 w-[27rem]"></img>
+      <img src={lakshmi}className="absolute bottom-0 right-0 w-[27rem] h-[40rem] transform scale-x-[-1]"></img>
     </div>
   );
 };

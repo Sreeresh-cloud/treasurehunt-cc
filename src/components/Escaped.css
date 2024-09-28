@@ -1,28 +1,50 @@
+/* Escaped Container */
 .escaped-container {
-    text-align: center;
-    padding: 30px;
-    background-color: #e0ffe0;
-    border-radius: 10px;
-    width: 80%;
-    margin: 50px auto;
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(244, 233, 233, 0.7); /* Slight transparency for the container */
+  border-radius: 10px;
+  width: 80%;
+  margin: 50px auto;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.5s ease forwards; /* Fade-in animation */
+  transform: translateY(350px);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start fully transparent */
   }
-  
-  h1 {
-    color: #28a745;
+  100% {
+    opacity: 1; /* End fully opaque */
   }
-  
-  .next-button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-  }
-  
-  .next-button:hover {
-    background-color: #218838;
-  }
-  
+}
+
+/* Heading Style */
+h1 {
+  color: #28a745;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.5s ease forwards; /* Fade-in animation for the heading */
+  animation-delay: 0.5s; /* Delay to appear after the container */
+}
+
+/* Next Button */
+.next-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.5s ease forwards; /* Fade-in animation for the button */
+  animation-delay: 1s; /* Delay to appear after the heading */
+}
+
+/* Next Button Hover Effect */
+.next-button:hover {
+  background-color: #218838;
+}

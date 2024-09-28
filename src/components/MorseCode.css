@@ -1,22 +1,26 @@
 /* MorseCode.css */
+
+/* Container styling for the MorseCode component */
 .morsecode-container {
   display: flex;
   flex-direction: column;
-  align-items: end;
-  justify-content: center;
-  gap: 20px;
-  /* padding: 20px; */
-  /* background-color: #f5f5f5;  */
-  height: 100vh;
-  text-align: center;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  gap: 20px; /* Space between elements */
+  height: 100vh; /* Full height of the viewport */
+  text-align: center; /* Center text */
+  opacity: 0; /* Initially hidden for fade-in effect */
+  animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
 }
 
+/* Story text styling */
 .morsecode-story {
   font-size: 1.2em;
   margin-bottom: 20px;
-  color: #333; /* Dark text */
+  color: #333; /* Dark text color */
 }
 
+/* Image styling */
 .morsecode-image {
   max-width: 80%;
   height: auto;
@@ -24,6 +28,7 @@
   border: 2px solid #ddd; /* Border around the image */
 }
 
+/* Input field styling */
 .morsecode-input {
   color: black;
   width: 60%;
@@ -34,29 +39,65 @@
   border-radius: 4px;
 }
 
+/* Submit button styling */
 .submit-button {
   padding: 10px 20px;
   font-size: 1em;
   color: white;
-  background-color: #28a745;
+  background-color: #28a745; /* Green background color */
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
+/* Hover effect for the submit button */
 .submit-button:hover {
-  background-color: #218838;
+  background-color: #218838; /* Darker green on hover */
 }
 
+/* Message styling */
 .morsecode-message {
   margin-top: 20px;
   font-size: 1.2em;
-  /* color: #333; */
 }
 
+/* Travel button styling */
 .travel-button {
-  background-color: #28a745;
+  background-color: #28a745; /* Green background color */
   color: white;
   border: none;
   cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform and shadow transition */
+}
+
+/* Travel button hover effect */
+.travel-button:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Background image styling */
+.morsecode-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed; /* Fixed position for background */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Background behind other content */
+  object-fit: cover; /* Ensure the image covers the container */
+  opacity: 0; /* Initially hidden for fade-in effect */
+  animation: fadeIn 2s ease-in-out forwards; /* Smooth fade-in animation */
 }

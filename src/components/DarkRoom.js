@@ -1,89 +1,104 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // For routing to the next page
-import './DarkRoom.css'; // Include the CSS for DarkRoom
+import { useNavigate } from 'react-router-dom';
+import './DarkRoom.css';
 
 const DarkRoom = () => {
   const [showButtons, setShowButtons] = useState(false);
-  const [isRoomLit, setIsRoomLit] = useState(false); // State to control lighting up the room
-  const [fadeOut, setFadeOut] = useState(false); // State for fade-out effect
-  const [showSecondMessage, setShowSecondMessage] = useState(false); // Show second message
-  const [isTransitionComplete, setIsTransitionComplete] = useState(false); // Final stage before routing
-  const navigate = useNavigate(); // Use React Router for navigation
+  const [isRoomLit, setIsRoomLit] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
+  const [message, setMessage] = useState('');
+  const [isTransitionComplete, setIsTransitionComplete] = useState(false);
+  const [attempts, setAttempts] = useState(0);
+  const [buttons, setButtons] = useState([]);
+  const navigate = useNavigate();
+  const [congratsVisible, setCongratsVisible] = useState(false);
 
-  // Toggle visibility of buttons when the component mounts
+  const generateButtonNumbers = () => {
+    const numbers = new Set();
+    while (numbers.size < 23) {
+      const randomNum = Math.floor(Math.random() * 90) + 10;
+      numbers.add(randomNum);
+    }
+    numbers.add(12);
+    setButtons([...numbers].sort((a, b) => a - b));
+  };
+
   useEffect(() => {
+    generateButtonNumbers();
     const timer = setTimeout(() => {
       setShowButtons(true);
-    }, 500); // Show buttons after 0.5 seconds
-
-    return () => clearTimeout(timer); // Cleanup timeout
+    }, 500);
+    return () => clearTimeout(timer);
   }, []);
 
-  // Function to handle button click
   const handleButtonClick = (index) => {
-    if (index === 11) { // Index 11 corresponds to button number 12 (zero-based index)
-      setFadeOut(true); // Trigger fade-out effect
+    const clickedNumber = buttons[index];
+    setAttempts((prevAttempts) => prevAttempts + 1);
+
+    if (clickedNumber === 12) {
+      setFadeOut(true);
       setTimeout(() => {
-        setIsRoomLit(true); // Light up the room after fade-out
-        setFadeOut(false); // Reset fadeOut state after transition
-      }, 1000); // Wait for fade-out duration before lighting up the room
+        setIsRoomLit(true);
+        setFadeOut(false);
+      }, 1000);
+      setMessage('');
+      setShowButtons(false);
+    } else {
+      if (attempts < 2) {
+        setMessage(clickedNumber < 12 ? "You're almost closer!" : "Try again");
+        setTimeout(() => setMessage(''), 2000);
+      } else {
+        setMessage('Oh no! Kelu is trapped in the darkness');
+        setShowButtons(false);
+      }
     }
   };
 
-  // Show second message after first message disappears
   useEffect(() => {
     if (isRoomLit) {
-      const secondMessageTimer = setTimeout(() => {
-        setShowSecondMessage(true);
-      }, 2000); // Delay for second message to appear
       const transitionCompleteTimer = setTimeout(() => {
         setIsTransitionComplete(true);
-      }, 5000); // Wait for second message to fade out before routing
-      return () => {
-        clearTimeout(secondMessageTimer);
-        clearTimeout(transitionCompleteTimer);
-      };
+      }, 5000);
+      return () => clearTimeout(transitionCompleteTimer);
     }
   }, [isRoomLit]);
 
-  // Navigate to the next page once the transitions are complete
   useEffect(() => {
     if (isTransitionComplete) {
-      navigate('/jigsaw-puzzle'); // Route to the next page (JigsawPuzzle)
+      navigate('/jigsaw-puzzle');
     }
   }, [isTransitionComplete, navigate]);
 
   return (
     <div className={`dark-room ${isRoomLit ? 'lit-room' : ''} ${fadeOut ? 'fade-out' : ''}`}>
-      {!isRoomLit ? (
+      {showButtons && attempts < 3 ? (
         <>
-          <h1 className="task-text font-bold">Task 2: Dark Room</h1>
-          <h2>Light up the room to unravel the mystery. Turn on the correct switch below to light up the room.</h2>
-          <h3>ALERT!! YOU ONLY HAVE 5 ATTEMPTS</h3>
+          <h1 className="task-text font-bold">Kunjikelu steps into a dark room</h1>
+          <h2>There are a few strange switches scattered around the dim room. He must find the correct switch to light up the room to unravel the mystery. Turn on the correct switch below to light up the room.</h2>
+          <h3>ALERT!! KELU ONLY HAVE 3 CHANCES. ONCE HE IS OUT OF CHANCE, HE WOULD BE TRAPPED INSIDE THE DARKNESS FOREVER</h3>
           <p className="hint-text">
             Hint: What do you get when you multiply the number of faces of a cube by the number of vertices of a triangle?
           </p>
-          <div className={`matrix-container flex gap-1 ${showButtons ? 'fade-in' : ''}`}>
-            {Array.from({ length: 24 }, (_, index) => (
+          <div className="matrix-container">
+            {buttons.map((number, index) => (
               <button
                 key={index}
                 className="matrix-button"
                 onClick={() => handleButtonClick(index)}
               >
-                {index + 1}
+                {number}
               </button>
             ))}
           </div>
+          {message && <p className="feedback-message">{message}</p>}
         </>
       ) : (
         <div className="lit-message">
-          <h1 className={`fade-out-text ${showSecondMessage ? 'hide' : ''}`}>Congrats, The room is lightened up!</h1>
-          {showSecondMessage && (
-            <h2 className={`fade-in-text text-black ${isTransitionComplete ? 'hide' : ''}`}>
-              You are near to the lamp. The lamp is hidden somewhere. Find it!
-            </h2>
-          )}
+          <h2 className="game-over">{message}</h2>
         </div>
+      )}
+      {attempts >= 3 && !isRoomLit && (
+        <h2 className="game-over">Oh no! Kelu is trapped in the darkness</h2>
       )}
     </div>
   );
