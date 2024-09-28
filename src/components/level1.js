@@ -53,7 +53,7 @@ const Level1 = () => {
 
           {!pinEntered && (
             <div className="input-container w-full">
-              <h1 className="-mt-14 sm:-mt-2 font-bold" style={{ color: '#FFA500' }}>
+              <h1 className="-mt-14 sm:-mt-2 font-bold text-[20px]" style={{ color: '#FFA500' }}>
               The door is locked tight. Help Kelu break through this door and reach the lamp!
               </h1>
               {/* <p className="mt-96">Enter pin to open:</p> */}
