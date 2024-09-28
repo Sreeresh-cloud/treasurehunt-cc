@@ -8,9 +8,9 @@
   text-align: center; /* Center the text */
   color: white; /* Change text color to white for better contrast */
   animation: fadeIn 1.5s ease-in-out; /* Apply fade-in animation */
+  flex-direction: row; /* Horizontal layout by default */
 }
 
-/* Define the fade-in keyframes */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -52,7 +52,6 @@
   animation: buttonFadeIn 2s ease-in-out 1.5s forwards; /* Delayed fade-in for button */
 }
 
-/* Additional fade-in animations for elements */
 @keyframes imageFadeIn {
   0% {
     opacity: 0;
@@ -83,5 +82,33 @@
   100% {
     opacity: 1;
     transform: scale(1); /* Back to original size */
+  }
+}
+
+/* Responsive Styles for Mobile View */
+@media (max-width: 768px) {
+  .introduction {
+    flex-direction: column; /* Stack elements vertically on mobile */
+    padding: 20px; /* Add some padding */
+  }
+
+  .imageContainer {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+  }
+
+  .image {
+    width: 100%; /* Make image width responsive */
+    max-width: 300px; /* Optional: set a max width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .textContainer {
+    flex: none; /* Remove flex growth */
+  }
+
+  .button {
+    font-size: 0.9rem; /* Adjust button font size */
+    padding: 10px 15px; /* Adjust button padding */
   }
 }
