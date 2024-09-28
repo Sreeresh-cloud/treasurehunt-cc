@@ -1,6 +1,6 @@
 .home-container {
   background-image: url('../images/home.png');
-  background-size: 100% 100%; /* Adjust to maintain aspect ratio */
+  background-size: cover; /* Maintain aspect ratio */
   background-position: center;
   height: 100vh;
   width: 100vw;
@@ -20,13 +20,13 @@
 
 .start-button {
   padding: 10px 20px;
-  font-size: 1.6rem;
+  font-size: 1.4rem; /* Slightly smaller font size */
   background-color: #ffcc00;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 600px;
+  margin-top: 20px; /* Reduced margin */
 }
 
 .start-button:hover {
@@ -35,32 +35,32 @@
 
 @keyframes fadeIn {
   from {
-      opacity: 0;
+    opacity: 0;
   }
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
   .home-container {
-      background-size: cover; /* Maintain aspect ratio on mobile */
-      height: auto; /* Allow height to adjust */
-      padding: 20px; /* Add padding for mobile */
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Allow height to adjust */
+    padding: 20px; /* Add padding for mobile */
   }
 
   h1 {
-      font-size: 2rem; /* Decrease heading size */
+    font-size: 1.6rem; /* Further decreased heading size */
   }
 
   p {
-      font-size: 1rem; /* Decrease paragraph size */
+    font-size: 0.9rem; /* Decrease paragraph size */
   }
 
   .start-button {
-      padding: 10px 15px; /* Adjust button padding */
-      font-size: 1.2rem; /* Decrease button font size */
-      margin-top: 300px; /* Reduce margin on mobile */
+    padding: 8px 12px; /* Adjust button padding */
+    font-size: 1rem; /* Decrease button font size */
+    margin-top: 10px; /* Reduce margin on mobile */
   }
 }
