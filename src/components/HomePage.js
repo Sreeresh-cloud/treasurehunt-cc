@@ -18,16 +18,7 @@ const HomePage = ({ isIntialised }) => {
       >
         Start Game
       </button>
-      {/* <div>
-     </div> */}
-      <img
-        src="/assets/cclogo.png"
-        className="absolute w-60 top-10 left-10"
-      ></img>
-      <img
-        src="/assets/tkmce.png"
-        className="w-40 absolute top-10 right-10"
-      ></img>
+     
     </div>
   );
 };
