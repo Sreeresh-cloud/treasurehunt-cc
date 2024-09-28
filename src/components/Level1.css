@@ -138,6 +138,17 @@
   }
 }
 
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+  .input-container {
+    width: 90%; /* Adjust width for landscape mode */
+  }
+
+  input[type="text"] {
+    width: 100%; /* Ensure full width for input */
+    max-width: none; /* No maximum width restriction */
+  }
+}
+
 /* Keyframe animation for fading in */
 @keyframes fadeIn {
   from {
