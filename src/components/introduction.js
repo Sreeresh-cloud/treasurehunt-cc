@@ -17,12 +17,12 @@ const Introduction = () => {
       
       <div className="textContainer bg-black bg-opacity-60 rounded-3xl p-5">
         <h1 className='text-[40px] font-mono font-bold text-white'>About the Event</h1>
-        <p className='text-[20px]'>
+        <p className='text-[10px]'>
         Join us for an exciting online treasure hunt inspired by the movie "Ajayante Randam Moshanam" (ARM). Navigate through three challenging levels filled with clues, puzzles, and adventure as you help our heroes find the magical lamp.
         </p>
-        <h2 className='text-[15px]'>Solve each challenge to move forward and compete for the chance to win movie tickets!</h2>
+        <h2 className='text-[8px]'>Solve each challenge to move forward and compete for the chance to win movie tickets!</h2>
         
-        <p className='text-[15px]'>
+        <p className='text-[7px]'>
           In the first level, you are Kunjikelu. Help Kunjikelu find the lamp from the palace!
         </p>
         <Link to="/locintro1">
