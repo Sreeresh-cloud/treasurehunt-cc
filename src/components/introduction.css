@@ -40,13 +40,13 @@
 
 .button {
   color: black;
-  padding: 10px 20px;
-  font-size: 1rem;
+  padding: 6px 12px; /* Further adjusted padding */
+  font-size: 0.6rem; /* Reduced button font size */
   background-color: #ffcc00; /* Adventure theme color */
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 8px; /* Reduced margin */
   transition: background-color 0.3s;
   opacity: 0;
   animation: buttonFadeIn 2s ease-in-out 1.5s forwards; /* Delayed fade-in for button */
@@ -108,7 +108,15 @@
   }
 
   .button {
-    font-size: 0.9rem; /* Adjust button font size */
-    padding: 10px 15px; /* Adjust button padding */
+    font-size: 0.5rem; /* Further reduce button font size */
+    padding: 6px 10px; /* Adjust button padding */
+  }
+
+  h1 {
+    font-size: 1rem; /* Decrease heading size further */
+  }
+
+  p {
+    font-size: 0.5rem; /* Decrease paragraph size further */
   }
 }
